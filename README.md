@@ -68,6 +68,10 @@ User -> main -> orchestrator -> researcher/critic -> orchestrator -> main -> use
 - `docs/architecture.md` → penjelasan peran tiap agent
 - `docs/troubleshooting.md` → solusi error umum
 - `docs/use-cases.md` → contoh penggunaan nyata
+- `docs/workflow-v1.md` → cara agent-agent saling kerja di versi awal
+- `docs/trigger-guide.md` → keyword trigger untuk mode multi-agent
+- `docs/output-format.md` → format output standar tiap role
+- `docs/native-next-step.md` → langkah lanjut ke orchestration native
 - `docs/roadmap.md` → arah pengembangan project
 - `templates/openclaw.multi-agent.example.json` → template config
 - `workspace-starter/` → starter folder agent
@@ -149,6 +153,24 @@ Contoh penggunaan repo ini:
 
 Lihat detail di:
 - `docs/use-cases.md`
+
+## Cara Membuat Agent-Agent Saling Kerja
+
+Di versi awal, agent-agent tidak otomatis bekerja sendiri hanya karena folder dan `SOUL.md` sudah ada.
+
+Supaya mulai terasa hidup, gunakan **Workflow V1**:
+- panggil mode multi-agent dengan keyword trigger
+- `main` bertindak sebagai entrypoint
+- `orchestrator` memecah task
+- `researcher` menyusun bahan
+- `critic` mengulas hasil
+- `main` mengirim jawaban final
+
+Dokumen penting:
+- `docs/workflow-v1.md`
+- `docs/trigger-guide.md`
+- `docs/output-format.md`
+- `docs/native-next-step.md`
 
 ## Troubleshooting Cepat
 
