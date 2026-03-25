@@ -1,0 +1,35 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "model": {
+        "primary": "openai-codex/gpt-5.4"
+      },
+      "models": {
+        "openai-codex/gpt-5.4": {}
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "workspace": "/root/.openclaw/workspace"
+      },
+      {
+        "id": "orchestrator",
+        "workspace": "/root/.openclaw/workspace/orchestrator",
+        "agentDir": "/root/.openclaw/agents/orchestrator/agent"
+      },
+      {
+        "id": "researcher",
+        "workspace": "/root/.openclaw/workspace/researcher",
+        "agentDir": "/root/.openclaw/agents/researcher/agent"
+      },
+      {
+        "id": "critic",
+        "workspace": "/root/.openclaw/workspace/critic",
+        "agentDir": "/root/.openclaw/agents/critic/agent"
+      }
+    ]
+  }
+}
